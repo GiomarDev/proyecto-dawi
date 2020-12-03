@@ -1,0 +1,8 @@
+127.0.0.1 - - [18/Nov/2020:22:12:29 -0500] "GET / HTTP/1.1" 404 637
+0:0:0:0:0:0:0:1 - - [18/Nov/2020:22:12:33 -0500] "GET /DAWI-Semana01-Plantilla(8)/login.jsp HTTP/1.1" 200 1972
+0:0:0:0:0:0:0:1 - - [18/Nov/2020:22:12:34 -0500] "GET /DAWI-Semana01-Plantilla(8)/css/signin.css HTTP/1.1" 200 793
+0:0:0:0:0:0:0:1 - - [18/Nov/2020:22:13:00 -0500] "GET /DAWI-Semana01-Plantilla(8)/login.jsp HTTP/1.1" 200 1972
+0:0:0:0:0:0:0:1 - - [18/Nov/2020:22:13:01 -0500] "GET /DAWI-Semana01-Plantilla(8)/css/signin.css HTTP/1.1" 200 793
+0:0:0:0:0:0:0:1 - - [18/Nov/2020:22:13:02 -0500] "GET /favicon.ico HTTP/1.1" 404 648
+0:0:0:0:0:0:0:1 - - [18/Nov/2020:22:13:05 -0500] "GET /DAWI-Semana01-Plantilla(8)/iniciarSesion?login=luis&clave=luis HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Nov/2020:22:13:05 -0500] "GET /DAWI-Semana01-Plantilla(8)/login.jsp HTTP/1.1" 200 2295
