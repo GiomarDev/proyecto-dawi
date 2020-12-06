@@ -1,6 +1,6 @@
-#Wed Nov 18 22:29:17 COT 2020
-viewport.x=-35
-zoom=1.0
+#Thu Dec 03 23:27:27 COT 2020
+viewport.x=-20
+zoom=0.97
 print.margin.right=0.5
 rulergrid.rulerunit=1
 rulergrid.snaptogrid=true
@@ -16,4 +16,4 @@ rulergrid.gridlevel=true
 print.margin.top=0.5
 print.useMillim=true
 print.usePortrait=true
-viewport.y=0
+viewport.y=-21

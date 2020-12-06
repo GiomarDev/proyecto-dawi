@@ -505,3 +505,39 @@ Command-line arguments:  -data D:\Ciclo05\DESARROLLO DE APLICACIONES WEB I\Proye
 
 !ENTRY com.ibm.cic.licensing.common.util 4 0 2020-11-18 21:43:42.934
 !MESSAGE LUM license expired for productID 45: Past the expiration date on license.
+!SESSION 2020-12-03 20:14:46.833 -----------------------------------------------
+eclipse.buildId=unknown
+java.fullversion=JRE 1.6.0 IBM J9 2.4 Windows Vista x86-32 jvmwi3260sr8-20100401_55940 (JIT enabled, AOT enabled)
+J9VM - 20100401_055940
+JIT  - r9_20100401_15339
+GC   - 20100308_AA
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_PE
+Framework arguments:  -product com.ibm.rational.rsa.product.v80.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ibm.rational.rsa.product.v80.ide
+
+!ENTRY com.ibm.cic.licensing.common.util 4 0 2020-12-03 20:15:20.531
+!MESSAGE LUM license expired for productID 45: Past the expiration date on license.
+
+!ENTRY com.ibm.cic.licensing.common.util 4 0 2020-12-03 20:15:22.846
+!MESSAGE LUM license expired for productID 45: Past the expiration date on license.
+
+!ENTRY com.ibm.cic.licensing.common.util 4 0 2020-12-03 20:15:22.867
+!MESSAGE LUM license expired for productID 45: Past the expiration date on license.
+
+!ENTRY com.ibm.cic.licensing.common.util 4 0 2020-12-03 20:15:22.881
+!MESSAGE LUM license expired for productID 45: Past the expiration date on license.
+
+!ENTRY com.ibm.cic.licensing.common.util 4 0 2020-12-03 20:15:23.504
+!MESSAGE LUM license expired for productID 44: Past the expiration date on license.
+
+!ENTRY com.ibm.xtools.emf.ram.ui 4 0 2020-12-03 20:15:23.669
+!MESSAGE RAM Client is not installed. Please install the RAM Client to enable the RAM integration functionality.
+
+!ENTRY com.ibm.xtools.emf.index 2 9 2020-12-03 20:15:31.837
+!MESSAGE The feature in the extension is invalid
+
+!ENTRY com.ibm.xtools.emf.index 2 9 2020-12-03 20:15:31.838
+!MESSAGE The feature in the extension is invalid
+
+!ENTRY com.ibm.cic.licensing.common.util 4 0 2020-12-03 20:15:48.864
+!MESSAGE LUM license expired for productID 45: Past the expiration date on license.

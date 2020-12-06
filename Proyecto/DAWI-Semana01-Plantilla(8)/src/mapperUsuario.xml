@@ -4,9 +4,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="dawi">
 	<resultMap type="UsuarioIbatis" id="mapUsuario">
-		<id  column="idUsuario" property="codigoUsuario"/>
-		<result column="nombres" property="nombres"/>
-		<result column="apellidos" property="apellidos"/>
+		<id  column="cod_usr" property="codigoUsuario"/>
+		<result column="nom_usr" property="nombres"/>
+		<result column="ape_usr" property="apellidos"/>
 	</resultMap>
 	
 	<resultMap type="EnlaceIbatis" id="mapEnlace">

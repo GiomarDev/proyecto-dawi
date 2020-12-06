@@ -1,0 +1,5 @@
+
+dic. 06, 2020 13:31:33.84 NEW SESSION
+dic. 06, 2020 13:31:33.84 [13668:13772:1206/133133.762:ERROR:device_event_log_impl.cc(208)] [13:31:33.762] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 06, 2020 13:38:05.12 [4064:12272:1206/133805.121:ERROR:device_event_log_impl.cc(208)] [13:38:05.121] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 06, 2020 13:43:36.98 [9968:11628:1206/134336.984:ERROR:device_event_log_impl.cc(208)] [13:43:36.984] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
