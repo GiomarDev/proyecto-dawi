@@ -1,4 +1,4 @@
-#Sun Dec 06 21:03:58 COT 2020
+#Mon Dec 07 18:14:24 COT 2020
 viewport.x=-34
 zoom=0.97
 print.margin.right=0.5
@@ -16,4 +16,4 @@ rulergrid.gridlevel=true
 print.margin.top=0.5
 print.useMillim=true
 print.usePortrait=true
-viewport.y=-21
+viewport.y=0
