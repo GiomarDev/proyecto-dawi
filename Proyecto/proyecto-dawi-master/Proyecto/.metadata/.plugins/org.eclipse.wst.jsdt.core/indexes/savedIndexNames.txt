@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\Usuario\Desktop\Proyecto\proyecto-dawi-master\Proyecto\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+461242946.index
+1057704515.index
+84767643.index
+2895926174.index
+739429589.index
+739102715.index
