@@ -12,6 +12,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="area_planT" property="area"/>
 		<result column="ape_usr" property="apellidos"/>
 	</resultMap>
+	
+	<resultMap type="FormatoIbatis" id="mapFormatoFind">
+		<id column="cod_infor" property="codigo"/>
+		<result column="descripcion" property="descip"/>
+		<result column="fuentes" property="fuentes"/>
+		<result column="contenido" property="contenido"/>
+		<result column="cod_planT" property="codPlanT"/>
+		<result column="cod_usr" property="codUsr"/>
+
+	</resultMap>
 
 	
 	<select id="SQl_listAllFormato" statementType="CALLABLE" resultMap="mapFormato">
@@ -22,15 +32,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				#{codPlanT},#{codUsr});
 	</insert>
 	<update id="SQL_UpdateFormato" statementType="CALLABLE" parameterType="FormatoIbatis">
-		call sp_update_formato(#{cod_infor},#{descripcion},#{fuentes},
+		call sp_update_formato(#{codigo},#{descip},#{fuentes},
 				#{contenido},#{codPlanT},#{codUsr});
 	</update>
 	<delete id="SQL_DeleteFormato" statementType="CALLABLE" parameterType="int">
 		call sp_eliminarFormato(#{codigo});
 	</delete>
 	
-	<select id="SQL_FindMedicamento" statementType="CALLABLE" parameterType="int" resultMap="mapMedicamento">
-		call sp_buscarMedicamento(#{id});
+	<select id="SQL_FindFormato" statementType="CALLABLE" parameterType="int" resultMap="mapFormatoFind">
+		call sp_buscaFormato(#{codigo});
 	</select>
 	
 </mapper>

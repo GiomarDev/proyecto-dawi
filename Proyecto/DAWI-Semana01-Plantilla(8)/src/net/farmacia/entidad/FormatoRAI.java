@@ -12,6 +12,14 @@ public class FormatoRAI {
 	private String area;
 	private String apellidos;
 	
+	private int codigoPlan;
+	
+	public int getCodigoPlan() {
+		return codigoPlan;
+	}
+	public void setCodigoPlan(int codigoPlan) {
+		this.codigoPlan = codigoPlan;
+	}
 	public String getArea() {
 		return area;
 	}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dawi">
+	<resultMap type="InformeMultipleIbatis" id="mapInformeMultiple">
+		<id 	column="cod_infm" property="idInformeMultiple"/>
+		<result column="de_infm" property="de"/>
+		<result column="pa_infm" property="para"/>
+		<result column="fec_cre" property="fec_creacion"/>
+		<result column="fec_mod" property="fec_modificacion"/>
+		<result column="asunto" property="asunto"/>
+		<result column="motivo" property="motivo"/>
+		<result column="cod_uniO" property="idUnidadOrganica"/>
+		<result column="cod_usr" property="ididUsuario"/>
+		<result column="nom_uniO" property="nomUnidadOrganica"/>
+		<result column="nom_usr" property="nomidUsuario"/>
+	</resultMap>
+	
+	
+	<select id="SQl_listAllInformeMultiples" statementType="CALLABLE" resultMap="mapInformeMultiple">
+		call sp_listarInformeMultiple();
+	</select>
+	<insert id="SQL_SaveInformeMultiple" statementType="CALLABLE" parameterType="InformeMultipleIbatis">
+		call sp_registrarInformeMultiple(#{de},#{para},#{fec_modificacion},#{asunto},
+										#{motivo},#{idUnidadOrganica});
+	</insert>
+	<delete id="SQL_DeleteInformeMultiple" statementType="CALLABLE" parameterType="int">
+		call sp_eliminarInformeMultiple(#{id});
+	</delete>
+	<update id="SQL_UpdateInformeMultiple" statementType="CALLABLE" parameterType="InformeMultipleIbatis">
+		call sp_actualizarInformeMultiple(#{idInformeMultiple},#{de},#{para},#{fec_modificacion},#{asunto},
+										#{motivo},#{idUnidadOrganica});
+	</update>
+	<select id="SQL_FindInformeMultiple" statementType="CALLABLE" parameterType="int" resultMap="mapInformeMultiple">
+		call sp_buscarInformeMultiple(#{id});
+	</select>
+</mapper>
+
+
+
+
+
+
+
+

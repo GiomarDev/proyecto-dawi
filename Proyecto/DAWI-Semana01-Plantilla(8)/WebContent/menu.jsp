@@ -11,7 +11,7 @@
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 	  	  <div class="navbar-header">
 		       <div class="navbar-header">
-	     		 <a class="navbar-brand" href="#">SERPRODAT</a>
+	     		 <a class="navbar-brand" href="#">INFORMACION MUNICIPAL LINCE</a>
 	  			</div>
 	  	</div>
 	  

@@ -12,4 +12,7 @@ public interface FormatoDAO {
 	public int deleteFormato(int id);
 
 	public int updateFormato(FormatoRAI form);
+
+	public FormatoRAI findFormato(int id);
 }
+

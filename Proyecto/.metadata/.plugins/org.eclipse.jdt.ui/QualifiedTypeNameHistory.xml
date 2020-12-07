@@ -10,6 +10,6 @@
 <fullyQualifiedTypeName name="net.farmacia.dao.MySqlFormatoDAO"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="net.farmacia.entidad.PlanDeTrabajo"/>
-<fullyQualifiedTypeName name="net.farmacia.entidad.FormatoRAI"/>
 <fullyQualifiedTypeName name="net.farmacia.service.FormatoService"/>
+<fullyQualifiedTypeName name="net.farmacia.entidad.FormatoRAI"/>
 </qualifiedTypeNameHistroy>

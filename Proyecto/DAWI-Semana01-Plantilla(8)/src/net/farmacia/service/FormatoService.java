@@ -32,5 +32,7 @@ public class FormatoService {
 	public int actualizarFormato(FormatoRAI bean) {
 		return daoFormato.updateFormato(bean);
 	}
-	
+	public FormatoRAI buscaFormato(int id) {
+		return daoFormato.findFormato(id);
+	}
 }

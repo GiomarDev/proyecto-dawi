@@ -36,3 +36,31 @@ dic. 07, 2020 02:12:02.28 [14688:20608:1207/021202.287:ERROR:device_event_log_im
 dic. 07, 2020 02:25:44.35 [20916:21276:1207/022544.353:ERROR:device_event_log_impl.cc(208)] [02:25:44.353] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
 dic. 07, 2020 02:30:06.30 [17600:12132:1207/023006.300:ERROR:device_event_log_impl.cc(208)] [02:30:06.299] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
 dic. 07, 2020 02:46:11.12 [9164:20756:1207/024611.121:ERROR:device_event_log_impl.cc(208)] [02:46:11.121] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:04:27.56 [16168:9928:1207/030427.568:ERROR:device_event_log_impl.cc(208)] [03:04:27.568] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:04:53.51 [17824:13804:1207/030453.516:ERROR:device_event_log_impl.cc(208)] [03:04:53.515] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:05:39.98 [3512:2392:1207/030539.988:ERROR:device_event_log_impl.cc(208)] [03:05:39.988] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:15:04.34 [2028:20256:1207/031504.341:ERROR:device_event_log_impl.cc(208)] [03:15:04.342] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:17:23.62 [10052:8540:1207/031723.629:ERROR:device_event_log_impl.cc(208)] [03:17:23.629] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:18:30.94 [16868:5024:1207/031830.948:ERROR:device_event_log_impl.cc(208)] [03:18:30.948] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:19:48.41 [19788:20624:1207/031948.415:ERROR:device_event_log_impl.cc(208)] [03:19:48.415] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:26:57.03 [1684:13336:1207/032657.038:ERROR:device_event_log_impl.cc(208)] [03:26:57.037] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:29:07.10 [15464:17764:1207/032907.104:ERROR:device_event_log_impl.cc(208)] [03:29:07.104] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:43:08.11 [16544:18440:1207/034308.116:ERROR:device_event_log_impl.cc(208)] [03:43:08.116] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 03:50:10.29 [17784:2968:1207/035010.298:ERROR:device_event_log_impl.cc(208)] [03:50:10.299] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 04:03:10.73 [18372:20200:1207/040310.737:ERROR:device_event_log_impl.cc(208)] [04:03:10.738] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 04:12:58.93 [1207/041258.938:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+dic. 07, 2020 04:13:43.05 [15976:7140:1207/041343.056:ERROR:device_event_log_impl.cc(208)] [04:13:43.056] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 04:15:08.31 [20556:21232:1207/041508.310:ERROR:device_event_log_impl.cc(208)] [04:15:08.309] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 04:40:45.25 [11396:13472:1207/044045.252:ERROR:device_event_log_impl.cc(208)] [04:40:45.251] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 04:49:36.33 [14248:9396:1207/044936.336:ERROR:device_event_log_impl.cc(208)] [04:49:36.336] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 04:50:50.03 [480:13024:1207/045050.037:ERROR:device_event_log_impl.cc(208)] [04:50:50.037] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 04:51:10.82 [14780:19892:1207/045110.826:ERROR:device_event_log_impl.cc(208)] [04:51:10.826] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 04:54:48.95 [21456:19652:1207/045448.957:ERROR:device_event_log_impl.cc(208)] [04:54:48.957] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 04:58:03.49 [18196:2308:1207/045803.496:ERROR:device_event_log_impl.cc(208)] [04:58:03.496] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 04:59:54.94 [11420:2108:1207/045954.940:ERROR:device_event_log_impl.cc(208)] [04:59:54.940] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 05:01:12.82 [20888:10804:1207/050112.825:ERROR:device_event_log_impl.cc(208)] [05:01:12.825] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 05:01:50.96 [15152:13776:1207/050150.960:ERROR:device_event_log_impl.cc(208)] [05:01:50.960] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+dic. 07, 2020 05:16:31.44 [3528:10152:1207/051631.443:ERROR:device_event_log_impl.cc(208)] [05:16:31.443] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.
+
+dic. 07, 2020 05:34:09.86 NEW SESSION
+dic. 07, 2020 05:34:09.86 [20684:18412:1207/053409.863:ERROR:device_event_log_impl.cc(208)] [05:34:09.863] Bluetooth: bluetooth_adapter_winrt.cc:1076 Getting Default Adapter failed.

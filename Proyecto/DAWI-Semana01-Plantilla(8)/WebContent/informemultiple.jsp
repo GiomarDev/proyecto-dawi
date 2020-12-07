@@ -1,4 +1,4 @@
-<jsp:include page="menu.jsp"/>
+<jsp:include page="menu.jsp"></jsp:include>
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <html lang="esS">
@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
  
 
-<title>Medicamento</title>
+<title>Informe Multiple</title>
 <style>
 	.modal-header, h4, .close {
 		background-color: #286090;
@@ -70,12 +70,12 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-        	Seguro de eliminar medicamento? 
+        	Seguro de eliminar el Informe Multiple? 
         </div>
         
         <!-- Modal footer -->
         <div class="modal-footer">
-          <form action="deleteMedicamento" method="post" name="myForm">	
+          <form action="deleteInformeMultiple" method="post" name="myForm">	
 		  	  <input type="hidden" id="idNumero" name="codigo">
 	             <button type="submit" class="btn btn-primary">SI</button>
 	             <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
@@ -111,43 +111,10 @@
     </div>
   </div>
 
-<!-- The Modal FOTO-->
-  <div class="modal fade" id="myModalFoto" data-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Sistema</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <form action="updateFoto" method="post" name="myForm" enctype="multipart/form-data">	
-	        <!-- Modal body -->
-	        <div class="modal-body">
-	        	<input type="text" id="idNumeroFoto" name="medicamento.idMedicamento">
-			  	<img id="idFoto">
-			  	<div class="form-group">
-		              <label for="staticEmail">Foto</label>
-						<input type="file" class="form-control" name="medicamento.archivo"/>
-		        </div>
-			  	
-	        </div>
-	        
-	        <!-- Modal footer -->
-	        <div class="modal-footer">
-	          <button type="submit" class="btn btn-primary">Actualizar</button>
-		      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-	
-	        </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-
 	<div class="container">
-		<h3 align="center">Lista de Medicamentos</h3>
+		<h3 align="center">Lista de Informes Multiples</h3>
 		<button type="button" data-toggle='modal'  data-target="#idModalRegistra" id="idNuevo"
-				class='btn btn-primary' >Nuevo Medicamento</button><br>&nbsp;<br>
+				class='btn btn-primary' >Nuevo Informe Multiple</button><br>&nbsp;<br>
 				
 				
 				
@@ -156,14 +123,15 @@
 												<thead>
 														<tr>
 															<th>Codigo</th>
-															<th>Nombre</th>
-															<th>Descripción</th>
-															<th>Stock</th>
-															<th>Precio</th>
-															<th>Fecha</th>
+															<th>De</th>
+															<th>Para</th>
+															<th>Fecha Creacion</th>
+															<th>Fecha Modificacion</th>
+															<th>Asunto</th>
+															<th>Motivo</th>
+															<th>Unidad Organica</th>
 															<th></th>
-															<th></th>
-															<th></th>
+															
 														</tr>
 												</thead>
 												<tbody>
@@ -179,54 +147,48 @@
 				<!-- Modal content-->
 				<div class="modal-content">
 				<div class="modal-header" style="padding: 5px 20px">
-					Registro de Medicamento<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					Registro de Informe Multiple<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           				
        				   </button>
 				</div>
 				<div class="modal-body" style="padding: 20px 20px;">
-					<form id="idRegistra" accept-charset="UTF-8" action="saveMedicamento" 
-													class="form-horizontal" method="post" 
-													data-toggle="validator" role="form"
-													enctype="multipart/form-data">						
-		                   				<input type="hidden" id="idCodigo" name="medicamento.idMedicamento" value="0">
-		                                	<div class="form-group">
-			                                   	<label for="staticEmail">Nombre</label>
-												<input class="form-control" id="idNombre" name="medicamento.nombre" placeholder="Ingrese el Nombre"/>
-			                                </div>    
-		                                    <div class="form-group">
-		                                       <label for="staticEmail">Descripción</label>
-											   <textarea class="form-control" id="idDescripcion" name="medicamento.descripcion" rows="3" cols="10" placeholder="Ingrese Descripción"></textarea>
+					<form id="idRegistra" accept-charset="UTF-8" action="saveInformeMultiple" 
+													class="form-horizontal" method="post" data-toggle="validator" role="form">						
+		                   				<input type="hidden" id="idCodigo" name="informeMultiple.idInformeMultiple" value="0">
+		                   				
+		                   					<div class="form-group col-md-3">
+		                                        <label for="staticEmail">Fecha Modificacion</label>
+													<input class="form-control" id="idFecha" name="informeMultiple.fec_modificacion" rows="3" cols="10" placeholder="Ingrese Fecha"></input>
 		                                    </div>
+		                   				
+		                                	<div class="form-row">
+		                                	<div class="form-group col-md-6"">
+			                                   	<label for="staticEmail">De:</label>
+												<input class="form-control" id="idDe" name="informeMultiple.de" placeholder="Ingrese el Remitente"/>
+			                                </div>    
+		                                    <div class="form-group col-md-6">
+		                                       <label for="staticEmail">Para:</label>
+		                                       <input class="form-control" id="idPara" name="informeMultiple.para" placeholder="Ingrese Receptor"/>
+		                                    </div>
+		                                    </div>
+		                                                  
 		                                    <div class="form-row">
-			                                    <div class="form-group col-md-6">
-			                                        <label for="staticEmail">Stock</label>
-														<input class="form-control" id="idStock" name="medicamento.stock" placeholder="Ingrese Stock"/>
-			                                    </div>
-			                                    <div class="form-group col-md-6">
-			                                        <label for="staticEmail">Precio</label>
-														<input class="form-control" id="idPrecio" name="medicamento.precio" placeholder="Ingrese Precio"/>
+			                                    <div class="form-group col-md-10">
+			                                        <label for="staticEmail">Asunto</label>
+														<input class="form-control" id="idAsunto" name="informeMultiple.asunto" placeholder="Ingrese Asunto"/>
 			                                    </div>
 			                                </div>    
 		                                    <div class="form-group">
-		                                        <label for="staticEmail">Fecha Fabricación</label>
-													<input class="form-control" id="idFecha" name="medicamento.fechaFabricacion" placeholder="Ingrese Fecha Fabricación"/>
+		                                        <label for="staticEmail">Motivo</label>
+													<textarea class="form-control" id="idMotivo" name="informeMultiple.motivo" rows="3" cols="10" placeholder="Ingrese Motivo"></textarea>
 		                                    </div>
 		                                    <div class="form-group">
-		                                        <label for="staticEmail">Laboratorio</label>
-													<select id="idLaboratorio" name="medicamento.idLaboratorio" class='form-control'>
+		                                        <label for="staticEmail">Unidad Organica</label>
+													<select id="idUnidadOrganica" name="informeMultiple.idUnidadOrganica" class='form-control'>
 							                                 <option value=" " >[SELECCIONE]</option>
 							                         </select>
 		                                    </div>
-		                                    <div class="form-group">
-		                                        <label for="staticEmail">Tipo</label>
-													<select id="idTipo" name="medicamento.codigoTipo" class='form-control'>
-							                                 <option value=" " >[SELECCIONE]</option>
-							                         </select>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label for="staticEmail">Foto</label>
-													<input type="file" class="form-control" name="medicamento.archivo"/>
-		                                    </div>
+		                                    
                         				<div class="modal-footer">
 									        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="btnCerrar">Cerrar</button>
 									        <button type="submit" class="btn btn-primary">Guardar</button>
@@ -252,35 +214,34 @@
 
 <script>
 $(document).ready(function() {
-	llenarLaboratorios();
-	llenarMedicamentos();
+	llenarUnidadOrganicas();
+	llenarInformeMultiples();
 });
 </script>
 
 <script type="text/javascript">
-//variable global
-var codTipo=0;
-
-function llenarLaboratorios(){
-	$.getJSON("listaLaboratorio",{},
+function llenarUnidadOrganicas(){
+	$.getJSON("listaUnidadOrganica",{},
 			function (data){
-				$.each(data.listaLaboratorios,function(index,item){
-					$("#idLaboratorio").append("<option value='"+item.idLaboratorio+"'>"+item.nombre+"</option>");
+				$.each(data.listaUnidadOrganicas,function(index,item){
+					$("#idUnidadOrganica").append("<option value='"+item.codigo+"'>"+item.nombre+"</option>");
 				})	
 	})
 }
-function llenarMedicamentos(){
-	$.getJSON("listAllMedicamentos",{},
+
+//variable global
+var codPlan=0;
+
+function llenarInformeMultiples(){
+	$.getJSON("listAllInformeMultiples",{},
 			function (data){
-				$.each(data.listaMedicamentos,function(index,item){
+				$.each(data.listaInformeMultiples,function(index,item){
 					var buscar="<button type='button' class='btn btn-secondary' data-toggle='modal'  id='idEditar' data-target='#idModalRegistra'>Editar</button>";
 					var eliminar="<button type='button' class='btn btn-danger' data-toggle='modal' "+
 								 "data-target='#myModal' id='idEliminar'>Eliminar</button>";
-					var foto="<button type='button' class='btn btn-danger' data-toggle='modal' "+
-								 "data-target='#myModalFoto' id='btnFoto'>Foto</button>";			 
-					$("#idTable").append("<tr><td>"+item.idMedicamento+"</td><td>"+item.nombre+"</td><td>"+item.descripcion+ 
-										 "</td><td>"+item.stock+"</td><td>"+item.precio+"</td><td>"+item.fechaFabricacion+
-										 "</td><td>"+buscar+"</td><td>"+eliminar+"</td><td>"+foto+"</td></tr>");
+					$("#idTable").append("<tr><td>"+item.idInformeMultiple+"</td><td>"+item.de+"</td><td>"+item.para+ 
+										 "</td><td>"+item.fec_creacion+"</td><td>"+item.fec_modificacion+"</td><td>"+item.asunto+"</td><td>"+item.motivo+"</td><td>"+item.nomUnidadOrganica+
+										 "</td><td>"+buscar+"</td><td>"+eliminar+"</td></tr>");
 				})	
 				
 				$("#idTable").DataTable();
@@ -300,18 +261,23 @@ $(document).on('click', '#idEliminar', function(){
 
 $(document).on('click', '#idEditar', function(){
     var id = $(this).parents("tr").find("td")[0].innerHTML;
-    $.getJSON("findMedicamento",{codigo:id},function (response){
-		$("#idCodigo").val(id); 
-		$("#idNombre").val(response.medicamento.nombre);
-		$("#idDescripcion").val(response.medicamento.descripcion);
-		$("#idStock").val(response.medicamento.stock);
-		$("#idPrecio").val(response.medicamento.precio);
-		$("#idFecha").val(response.medicamento.fechaFabricacion);
-		$("#idLaboratorio").val(response.medicamento.idLaboratorio);
-		//alacenar el valor de tipo de medicamento en la variable global codTipo
-		codTipo=response.medicamento.codigoTipo;
-		//invocar al evento change del select idLaboratorio
-		$("#idLaboratorio").trigger("change");
+    $.getJSON("findInformeMultiple",{codigo:id},function (response){
+    	//codPlan=response.informeMultiple.idInformeMultiple;
+    	$("#idCodigo").val(response.informeMultiple.idInformeMultiple); 
+		$("#idDe").val(response.informeMultiple.de);
+		$("#idPara").val(response.informeMultiple.para);
+		$("#idFecha").val(response.informeMultiple.fec_modificacion);
+		$("#idAsunto").val(response.informeMultiple.asunto);
+		$("#idMotivo").val(response.informeMultiple.motivo);
+		$("#idUnidadOrganica").val(response.informeMultiple.idUnidadOrganica);
+		$("#idUnidadOrganica").trigger("change");
+		
+		
+		
+        //invocar al evento change del select idLaboratorio
+        
+		
+		
     })  
 })
 $(document).on('click', '#btnCerrar', function(){
@@ -319,38 +285,6 @@ $(document).on('click', '#btnCerrar', function(){
     $('#idRegistra').trigger("reset");
 	$("#idCodigo").val(0); 
 })
-$(document).on('click', '#btnFoto', function(){
-	 var id = $(this).parents("tr").find("td")[0].innerHTML;
-	 $("#idNumeroFoto").val(id);
-	 
-	 $.getJSON("findFotoMedicamento",{codigo:id},function (response){
-		 if(response.baseFoto!=null)
-		 	$("#idFoto").attr("src","data:image/jpg;base64,"+response.baseFoto);
-		 else
-			 $("#idFoto").attr("src","img/image-not-found.png");
-	 })
-})
-
-//asignar evento change al select "idLaboratorio"
-$("#idLaboratorio").change(function(){
-	//obtner el id del laboratorio seleccionado
-	var idLab;
-	idLab=$(this).val();
-	$.getJSON("listaTipo",{idLaboratorio:idLab},function (response){
-		//limpiar select idTipo
-		$("#idTipo").empty().append("<option value=''>[Seleccione Tipo]</option>")
-		$.each(response.listaTipos,function(index,item){
-			//validar 
-			if(codTipo==item.codigoTipo)
-				$("#idTipo").append("<option value='"+item.codigoTipo+"' selected>"+item.nombre+"</option>");
-			else
-				$("#idTipo").append("<option value='"+item.codigoTipo+"'>"+item.nombre+"</option>");
-			
-			
-		})
-	})
-})
-
 
 </script>
 

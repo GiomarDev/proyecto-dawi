@@ -85,4 +85,19 @@ public class MySqlFormatoDAO implements FormatoDAO{
 		return estado;
 	}
 
+	@Override
+	public FormatoRAI findFormato(int id) {
+		FormatoRAI form=null;
+		SqlSession session=factory.openSession();
+		try {
+			form=(FormatoRAI) session.selectOne("SQL_FindFormato",id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally{
+			session.close();
+		}
+		return form;
+	}
+
 }

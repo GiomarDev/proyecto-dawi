@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- PASO 1: Alias a las clases  que se encuentra en el paquete entidad-->	
+	<typeAliases>
+		<typeAlias type="net.farmacia.entidad.Laboratorio" alias="LaboratorioIbatis"/>
+		<typeAlias type="net.farmacia.entidad.Medicamento" alias="MedicamentoIbatis"/>
+		<typeAlias type="net.farmacia.entidad.Tipo" alias="TipoIbatis"/>
+		<typeAlias type="net.farmacia.entidad.Enlace" alias="EnlaceIbatis"/>
+		<typeAlias type="net.farmacia.entidad.Usuario" alias="UsuarioIbatis"/>
+		<typeAlias type="net.farmacia.entidad.FormatoRAI" alias="FormatoIbatis"/>
+		<typeAlias type="net.farmacia.entidad.PlanDeTrabajo" alias="PlanIbatis"/>
+		<typeAlias type="net.farmacia.entidad.UnidadOrganica" alias="UnidadOrganicaIbatis"/>
+		<typeAlias type="net.farmacia.entidad.InformeMultiple" alias="InformeMultipleIbatis"/>
+	</typeAliases>
+	<!-- PASO 2: Conexión a BD -->
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="UNPOOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost/bd_copia_seguridad?useSSL=false"/>
+				<property name="username" value="root"/>
+				<property name="password" value="mysql"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- PASO 3: Registro de los archivos XML (contienen las sentencias sql)-->
+	<mappers>
+		<mapper resource="mapperLaboratorio.xml"/>
+		<mapper resource="mapperMedicamento.xml"/>
+		<mapper resource="mapperTipo.xml"/>
+		<mapper resource="mapperUsuario.xml"/>
+		<mapper resource="mapperFormatoRai.xml"/>
+		<mapper resource="mapperPlan.xml"/>
+		<mapper resource="mapperUnidadOrganica.xml"/>
+		<mapper resource="mapperInformeMultiple.xml"/>
+	</mappers>
+</configuration>
+
+

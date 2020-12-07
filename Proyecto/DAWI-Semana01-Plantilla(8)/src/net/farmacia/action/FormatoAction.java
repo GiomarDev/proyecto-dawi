@@ -68,7 +68,13 @@ public class FormatoAction extends ActionSupport{
 		else
 			session.put("MENSAJE", "Error en la eliminación");		
 		return "ok";
-	}	
+	}
+	
+	@Action(value = "/findFormato",results = {@Result(name="ok",type="json")})
+	public String findFormato() {
+		formato=servicio.buscaFormato(codigo);
+		return "ok";
+	}
 
 	public int getCodigo() {
 		return codigo;

@@ -1,3 +1,4 @@
+<jsp:include page="menu.jsp"></jsp:include>
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <html lang="esS">
@@ -126,7 +127,8 @@
 				<div class="modal-body" style="padding: 20px 20px;">
 					<form id="idRegistra" accept-charset="UTF-8" action="saveFormato" 
 													class="form-horizontal" method="post" 
-													data-toggle="validator" role="form">						
+													data-toggle="validator" role="form">	
+													<input type="hidden" id="idCodigo" name="formato.codigo" value="0">					
 		                                	<div class="form-group">
 			                                   	<label for="staticEmail">Descripcion</label>
 												<input class="form-control" id="idNombre" name="formato.descip" placeholder="Ingrese  Nombres"/>
@@ -183,7 +185,7 @@ $(document).ready(function() {
 
 <script type="text/javascript">
 //variable global
-var codTipo=0;
+var codPlan=0;
 
 function llenarMercaderias(){
 	$.getJSON("listAllPlan",{},function (response){
@@ -220,6 +222,19 @@ $(document).on('click', '#idEliminar', function(){
 
 
 $(document).on('click', '#idEditar', function(){
+    var id = $(this).parents("tr").find("td")[0].innerHTML;
+    $.getJSON("findFormato",{codigo:id},function (response){
+		$("#idCodigo").val(id); 
+		$("#idNombre").val(response.formato.descip);
+		$("#idFuentes").val(response.formato.fuentes);
+		$("#idContenido").val(response.formato.contenido);
+		$("#idCodUsr").val(response.formato.codUsr);
+		$("#idFormato").val(response.formato.codPlanT);
+		//alacenar el valor de tipo de medicamento en la variable global codTipo
+		codPlan=response.formato.codigoPlan;
+		//invocar al evento change del select idLaboratorio
+		$("#idFormato").trigger("change");
+    })  
 	
 })
 $(document).on('click', '#btnCerrar', function(){
