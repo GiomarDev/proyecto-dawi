@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dawi">
+	<resultMap type="FormatoIbatis" id="mapFormato">
+		<id column="cod_infor" property="codigo"/>
+		<result column="descripcion" property="descip"/>
+		<result column="fuentes" property="fuentes"/>
+		<result column="contenido" property="contenido"/>
+		<result column="cod_planT" property="codPlanT"/>
+		<result column="cod_usr" property="codUsr"/>
+	</resultMap>
+
+	
+	
+	<select id="SQl_listAllMedicamentos" statementType="CALLABLE" resultMap="mapFormato">
+		call sp_listarMedicamento();
+	</select>
+	
+	
+	<insert id="SQL_SaveMedicamento" statementType="CALLABLE" parameterType="MedicamentoIbatis">
+		call sp_registrarMedicamento(#{nombre},#{descripcion},#{stock},
+				#{precio},#{fechaFabricacion},#{idLaboratorio},#{foto},#{codigoTipo});
+	</insert>
+	<update id="SQL_UpdateMedicamento" statementType="CALLABLE" parameterType="MedicamentoIbatis">
+		call sp_actualizarMedicamento(#{idMedicamento},#{nombre},#{descripcion},
+				#{stock},#{precio},#{fechaFabricacion},#{idLaboratorio},#{codigoTipo});
+	</update>
+	<delete id="SQL_DeleteMedicamento" statementType="CALLABLE" parameterType="int">
+		call sp_eliminarMedicamento(#{id});
+	</delete>
+	<select id="SQL_FindMedicamento" statementType="CALLABLE" parameterType="int" resultMap="mapMedicamento">
+		call sp_buscarMedicamento(#{id});
+	</select>
+	<select id="SQL_FindMedicamentoFoto" statementType="CALLABLE" parameterType="int" resultMap="mapMedicamentoFoto">
+		call sp_buscarMedicamentoFoto(#{id});
+	</select>
+	<update id="SQL_UpdateFoto" statementType="CALLABLE" parameterType="MedicamentoIbatis">
+		call sp_actualizarFoto(#{idMedicamento},#{foto});
+	</update>
+</mapper>
+
+
+
+
+
+
+
+

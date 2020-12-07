@@ -1,0 +1,7 @@
+package net.farmacia.dao;
+
+import net.farmacia.interfaces.PlanDAO;
+
+public class MySqlPlanDAO implements PlanDAO{
+
+}

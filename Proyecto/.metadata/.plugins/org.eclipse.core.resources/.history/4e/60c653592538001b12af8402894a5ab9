@@ -1,0 +1,6 @@
+package net.farmacia.action;
+
+@ParentPackage("dawi")
+public class FormatoAction extends ActionSupport{
+
+}

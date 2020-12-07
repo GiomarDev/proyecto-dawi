@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="net.farmacia.interfaces.FormatoDAO"/>
+<fullyQualifiedTypeName name="net.farmacia.interfaces.PlanDAO"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
+<fullyQualifiedTypeName name="utils.MySqlFactory"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="net.farmacia.dao.MySqlPlanDAO"/>
+<fullyQualifiedTypeName name="net.farmacia.dao.MySqlFormatoDAO"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="net.farmacia.entidad.PlanDeTrabajo"/>
+<fullyQualifiedTypeName name="net.farmacia.entidad.FormatoRAI"/>
+<fullyQualifiedTypeName name="net.farmacia.service.FormatoService"/>
+</qualifiedTypeNameHistroy>

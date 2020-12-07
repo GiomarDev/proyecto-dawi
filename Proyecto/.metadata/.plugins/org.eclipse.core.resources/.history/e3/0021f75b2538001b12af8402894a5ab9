@@ -1,0 +1,15 @@
+package net.farmacia.action;
+import java.util.List;
+import java.util.Map;
+import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.ParentPackage;
+import org.apache.struts2.convention.annotation.Result;
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
+import net.consorcio.entidad.Mercaderia;
+import net.consorcio.entidad.Tipo;
+import net.consorcio.service.MercaderiaService;
+@ParentPackage("dawi")
+public class FormatoAction extends ActionSupport{
+
+}

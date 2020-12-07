@@ -1,0 +1,5 @@
+package net.farmacia.dao;
+
+public class MySqlFormatoDAO {
+
+}

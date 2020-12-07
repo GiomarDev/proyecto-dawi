@@ -1,0 +1,12 @@
+package net.farmacia.dao;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import net.farmacia.interfaces.FormatoDAO;
+
+public class MySqlFormatoDAO implements FormatoDAO{
+
+}

@@ -1,3 +1,5 @@
 INDEX VERSION 1.130
+C:\Users\Usuario\Desktop\Proyecto\proyecto-dawi-master\Proyecto\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1917837779.index
+\DAWI-Semana01-Plantilla(8)\src
 D:\Ciclo05\DESARROLLO DE APLICACIONES WEB I\Proyecto\Proyecto\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1917837779.index
 \DAWI-Semana01-Plantilla(8)\src

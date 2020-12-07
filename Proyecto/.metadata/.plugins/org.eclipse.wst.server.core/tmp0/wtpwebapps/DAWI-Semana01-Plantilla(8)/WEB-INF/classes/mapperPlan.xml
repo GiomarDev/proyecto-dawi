@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dawi">
+	<resultMap type="PlanIbatis" id="mapPlan">
+		<id  column="cod_planT" property="codigo"/>
+		<result column="area_planT" property="area"/>
+	</resultMap>
+	
+	<select id="SQL_listAllPlan" statementType="CALLABLE" 
+			resultMap="mapPlan">
+		call sp_consulta_trabajo();
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+

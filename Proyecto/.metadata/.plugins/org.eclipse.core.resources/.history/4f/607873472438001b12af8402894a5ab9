@@ -1,0 +1,16 @@
+package net.farmacia.dao;
+
+import java.util.List;
+
+import net.farmacia.entidad.PlanDeTrabajo;
+import net.farmacia.interfaces.PlanDAO;
+
+public class MySqlPlanDAO implements PlanDAO{
+
+	@Override
+	public List<PlanDeTrabajo> listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

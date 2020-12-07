@@ -18,7 +18,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		call sp_iniciarSesion(#{login},#{clave});
 	</select>
 	<select id="SQL_traerEnlacesPorUsuario" statementType="CALLABLE" resultMap="mapEnlace" parameterType="int">
-		call sp_traerEnlacesPorUsuario(#{codUsu});
+		call sp_traerEnlacesDelUsuario(#{codUsu});
 	</select>
 	
 </mapper>

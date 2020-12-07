@@ -1,0 +1,26 @@
+package net.farmacia.dao;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import net.farmacia.entidad.FormatoRAI;
+import net.farmacia.interfaces.FormatoDAO;
+
+public class MySqlFormatoDAO implements FormatoDAO{
+
+	private SqlSessionFactory factory;				
+
+	public MySqlMercaderiaDAO() {
+		//instanciar objeto
+		factory=MySqlFactory.getSessionFactory();
+	}
+	
+	@Override
+	public List<FormatoRAI> listAll(FormatoRAI bean) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

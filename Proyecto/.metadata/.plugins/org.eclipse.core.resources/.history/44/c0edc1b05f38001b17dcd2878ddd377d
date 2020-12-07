@@ -1,0 +1,98 @@
+package net.farmacia.action;
+import java.util.List;
+import java.util.Map;
+import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.ParentPackage;
+import org.apache.struts2.convention.annotation.Result;
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
+
+import net.farmacia.entidad.FormatoRAI;
+import net.farmacia.entidad.PlanDeTrabajo;
+import net.farmacia.service.FormatoService;
+
+@ParentPackage("dawi")
+public class FormatoAction extends ActionSupport{
+	private List<PlanDeTrabajo> listaPlan;
+	private List<FormatoRAI> listaFormato;
+	private FormatoRAI formato;
+	private int codigo;
+	
+	private Map<String, Object> session=ActionContext.getContext().getSession();
+
+	private FormatoService servicio;
+	
+	public FormatoAction(){
+		servicio=new FormatoService();
+	}
+	
+	@Action(value = "/listAllPlan",results = {@Result(name="ok",type="json")})
+	public String listAllPlan() {
+		listaPlan=servicio.listaPlan();
+		return "ok";
+	}
+	
+	@Action(value = "/listAllFormato",results = {@Result(name="ok",type="json")})
+	public String listAllFormato() {
+		listaFormato=servicio.listaConsulta();
+		return "ok";
+	}
+	
+	@Action(value = "/saveFormato",results = {@Result(name="ok",type="redirect",location = "/formatorai.jsp")})
+	public String saveFormato() {
+		int resu;
+		//validar el atributo idMedicamento
+		if(formato.getCodigo()==0){
+			resu=servicio.registrarFormato(formato);
+			if(resu!=-1)
+				session.put("MENSAJE", "Registro guardado correctamente");
+			else
+				session.put("MENSAJE", "Error en el registro");
+		}
+		return "ok";
+	}
+	
+	@Action(value = "/deleteFormato",results = {@Result(name="ok",type="redirect",location = "/formatorai.jsp")})
+	public String deleteFormato() {
+		int resu;
+		resu=servicio.eliminarFormato(codigo);
+		if(resu!=-1)
+			session.put("MENSAJE", "Eliminado correctamente");
+		else
+			session.put("MENSAJE", "Error en la eliminación");		
+		return "ok";
+	}	
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public List<PlanDeTrabajo> getListaPlan() {
+		return listaPlan;
+	}
+
+	public void setListaPlan(List<PlanDeTrabajo> listaPlan) {
+		this.listaPlan = listaPlan;
+	}
+
+	public List<FormatoRAI> getListaFormato() {
+		return listaFormato;
+	}
+
+	public void setListaFormato(List<FormatoRAI> listaFormato) {
+		this.listaFormato = listaFormato;
+	}
+
+	public FormatoRAI getFormato() {
+		return formato;
+	}
+
+	public void setFormato(FormatoRAI formato) {
+		this.formato = formato;
+	}
+	
+}

@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\Ciclo05\DESARROLLO DE APLICACIONES WEB I\Proyecto\Proyecto\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Ciclo05\DESARROLLO DE APLICACIONES WEB I\Proyecto\Proyecto\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\DAWI-Semana01-Plantilla(8)" path="/DAWI-Semana01-Plantilla(8)" reloadable="true" source="org.eclipse.jst.jee.server:DAWI-Semana01-Plantilla(8)"/></Host>
+      <Context docBase="C:\Users\Usuario\Desktop\Proyecto\proyecto-dawi-master\Proyecto\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\Usuario\Desktop\Proyecto\proyecto-dawi-master\Proyecto\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\DAWI-Semana01-Plantilla(8)" path="/DAWI-Semana01-Plantilla(8)" reloadable="true" source="org.eclipse.jst.jee.server:DAWI-Semana01-Plantilla(8)"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -106,8 +106,6 @@ public class MedicamentoAction extends ActionSupport{
 			session.put("MENSAJE", "Registro eliminado correctamente");
 		else
 			session.put("MENSAJE", "Error en la eliminación");
-		
-		
 		return "ok";
 	}	
 	

@@ -1,0 +1,88 @@
+package net.farmacia.dao;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import net.farmacia.entidad.FormatoRAI;
+import net.farmacia.interfaces.FormatoDAO;
+import utils.MySqlFactory;
+
+public class MySqlFormatoDAO implements FormatoDAO{
+
+	private SqlSessionFactory factory;				
+
+	public MySqlFormatoDAO() {
+		//instanciar objeto
+		factory=MySqlFactory.getSqlSessionFactory();
+	}
+	
+	@Override
+	public List<FormatoRAI> listAll() {
+		List<FormatoRAI> lista=new ArrayList<FormatoRAI>();
+		SqlSession session=factory.openSession();
+		try {
+			lista=session.selectList("SQl_listAllFormato");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			session.close();
+		}
+		return lista;
+	}
+
+	@Override
+	public int saveFormato(FormatoRAI bean) {
+		int estado=-1;
+		SqlSession session=factory.openSession();
+		try {
+			estado=session.insert("SQL_SaveFormato",bean);
+			session.commit();
+		} catch (Exception e) {
+			session.rollback();
+			e.printStackTrace();
+		}
+		finally {
+			session.close();
+		}
+		return estado;
+	}
+
+	@Override
+	public int deleteFormato(int id) {
+		int estado=-1;
+		SqlSession session=factory.openSession();
+		try {
+			estado=session.delete("SQL_DeleteFormato",id);
+			session.commit();
+		} catch (Exception e) {
+			session.rollback();
+			e.printStackTrace();
+		}
+		finally{
+			session.close();
+		}
+		return estado;
+	}
+
+	@Override
+	public int updateFormato(FormatoRAI form) {
+
+		int estado=-1;
+		SqlSession session=factory.openSession();
+		try {
+			estado=session.update("SQL_UpdateFormato",form);
+			session.commit();
+		} catch (Exception e) {
+			session.rollback();
+			e.printStackTrace();
+		}
+		finally{
+			session.close();
+		}
+		return estado;
+	}
+
+}

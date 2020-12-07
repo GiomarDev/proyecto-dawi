@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dawi">
+	<resultMap type="FormatoIbatis" id="mapFormato">
+		<id column="cod_infor" property="codigo"/>
+		<result column="descripcion" property="descip"/>
+		<result column="fuentes" property="fuentes"/>
+		<result column="contenido" property="contenido"/>
+		<result column="cod_planT" property="codPlanT"/>
+		<result column="cod_usr" property="codUsr"/>
+	</resultMap>
+
+	
+	
+
+</mapper>
+
+
+
+
+
+
+
+

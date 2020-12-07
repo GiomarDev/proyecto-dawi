@@ -1,0 +1,26 @@
+package net.farmacia.service;
+
+import java.util.List;
+
+import net.farmacia.dao.MySqlFormatoDAO;
+import net.farmacia.dao.MySqlPlanDAO;
+import net.farmacia.entidad.FormatoRAI;
+
+public class FormatoService {
+
+	private MySqlPlanDAO daoPlan;
+	private MySqlFormatoDAO daoFormato;
+	
+	public FormatoService() {
+		daoPlan = new MySqlPlanDAO();
+		daoFormato = new MySqlFormatoDAO();
+	}
+	
+	public List<FormatoRAI> listaConsulta(FormatoRAI bean) {
+		return daoFormato.listAll(bean)));
+	}
+	public List<Tipo> listaTipo(){
+		return daoTipo.listAll();
+	}
+	
+}

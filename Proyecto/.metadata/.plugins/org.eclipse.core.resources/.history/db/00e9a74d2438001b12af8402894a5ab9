@@ -1,0 +1,26 @@
+package net.farmacia.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import net.farmacia.entidad.PlanDeTrabajo;
+import net.farmacia.interfaces.PlanDAO;
+import utils.MySqlFactory;
+
+public class MySqlPlanDAO implements PlanDAO{
+
+	private SqlSessionFactory factory;
+	
+	public MySqlPlanDAO() {
+		//instanciar objeto
+		factory=MySqlFactory.getSqlSessionFactory();
+	}
+	
+	@Override
+	public List<PlanDeTrabajo> listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
