@@ -1,0 +1,24 @@
+<jsp:include page="menu.jsp"></jsp:include>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+</head>
+<body>
+<center><h1>SISTEMA DE INFORMACION MUNICIPAL DE LINCE</h1></center>
+<center><img src="img/lince.PNG" class="avatar" alt="Avatar Image"></center></center>
+</br>
+</br>
+</br>
+<h4>El distrito de Lince es uno de los 43 que conforman la provincia de Lima, ubicada en el departamento de Lima en el Perú. Limita por el Norte con los distritos de Jesús María y Lima, por el Este con el distrito de La Victoria y por el Sur y el Oeste con el distrito de San Isidro.</h4>
+
+</br>
+</br>
+
+<p>En el marco de la actividad se reconoció a estos valientes y abgenados</p>
+</body>
+</html>
+
